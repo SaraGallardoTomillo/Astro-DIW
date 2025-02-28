@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><style data-vite-dev-id="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro?astro&amp;type=style&amp;index=0&amp;lang.css">details[data-astro-cid-oijfivg5] summary[data-astro-cid-oijfivg5]{list-style:none;outline:none}details[data-astro-cid-oijfivg5][open] .mas[data-astro-cid-oijfivg5]{display:none}details[data-astro-cid-oijfivg5]:not([open]) .menos[data-astro-cid-oijfivg5]{display:none}details[data-astro-cid-oijfivg5][open] .menos[data-astro-cid-oijfivg5]{display:inline}</style>
+<style data-vite-dev-id="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/styles/global.css">/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-amber-50: oklch(0.987 0.022 95.277);
+    --color-amber-200: oklch(0.924 0.12 95.746);
+    --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-gray-700: oklch(0.373 0.034 259.733);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --default-font-family: var(--font-sans);
+    --default-font-feature-settings: var(--font-sans--font-feature-settings);
+    --default-font-variation-settings: var(
+      --font-sans--font-variation-settings
+    );
+    --default-mono-font-family: var(--font-mono);
+    --default-mono-font-feature-settings: var(
+      --font-mono--font-feature-settings
+    );
+    --default-mono-font-variation-settings: var(
+      --font-mono--font-variation-settings
+    );
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var( --default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" );
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var( --default-font-variation-settings, normal );
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    line-height: inherit;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var( --default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace );
+    font-feature-settings: var( --default-mono-font-feature-settings, normal );
+    font-variation-settings: var( --default-mono-font-variation-settings, normal );
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+    color: color-mix(in oklab, currentColor 50%, transparent);
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-15 {
+    top: calc(var(--spacing) * 15);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
+  }
+  .right-\[-25px\] {
+    right: -25px;
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline {
+    display: inline;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .size-2 {
+    width: calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 2);
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+  .size-3\.5 {
+    width: calc(var(--spacing) * 3.5);
+    height: calc(var(--spacing) * 3.5);
+  }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+  .size-8 {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
+  .size-15 {
+    width: calc(var(--spacing) * 15);
+    height: calc(var(--spacing) * 15);
+  }
+  .size-20 {
+    width: calc(var(--spacing) * 20);
+    height: calc(var(--spacing) * 20);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
+  .h-200 {
+    height: calc(var(--spacing) * 200);
+  }
+  .h-240 {
+    height: calc(var(--spacing) * 240);
+  }
+  .h-250 {
+    height: calc(var(--spacing) * 250);
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .w-7xl {
+    width: var(--container-7xl);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-max {
+    width: max-content;
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .self-center {
+    align-self: center;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-amber-200 {
+    border-color: var(--color-amber-200);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
+  .border-gray-700 {
+    border-color: var(--color-gray-700);
+  }
+  .border-gray-800 {
+    border-color: var(--color-gray-800);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .ps-2 {
+    padding-inline-start: calc(var(--spacing) * 2);
+  }
+  .ps-3 {
+    padding-inline-start: calc(var(--spacing) * 3);
+  }
+  .ps-8 {
+    padding-inline-start: calc(var(--spacing) * 8);
+  }
+  .ps-10 {
+    padding-inline-start: calc(var(--spacing) * 10);
+  }
+  .pt-0 {
+    padding-top: calc(var(--spacing) * 0);
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .align-middle {
+    vertical-align: middle;
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-amber-50 {
+    color: var(--color-amber-50);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .no-underline {
+    text-decoration-line: none;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .group-focus-within\:block {
+    &:is(:where(.group):focus-within *) {
+      display: block;
+    }
+  }
+  .group-hover\:block {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        display: block;
+      }
+    }
+  }
+  .hover\:bg-gray-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .hover\:bg-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-400);
+      }
+    }
+  }
+  .hover\:text-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-400);
+      }
+    }
+  }
+  .focus\:bg-gray-400 {
+    &:focus {
+      background-color: var(--color-gray-400);
+    }
+  }
+  .focus\:text-gray-400 {
+    &:focus {
+      color: var(--color-gray-400);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
+  .xl\:flex {
+    @media (width >= 80rem) {
+      display: flex;
+    }
+  }
+  .xl\:hidden {
+    @media (width >= 80rem) {
+      display: none;
+    }
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+</style><script type="module" src="Document_files/client.es"></script>
+<script type="module" src="Document_files/entrypoint.js"></script>
+<script>window.__astro_dev_toolbar__ = {"root":"/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/","version":"5.4.1","debugInfo":"Astro                    v5.4.1\nNode                     v18.19.1\nSystem                   Linux (x64)\nPackage Manager          npm\nOutput                   static\nAdapter                  none\nIntegrations             none"}</script>
+<script type="module" src="Document_files/Facordeon.es"></script>
+<script type="module" src="Document_files/global.css"></script></head> <body data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/pages/index.astro" data-astro-source-loc="15:7"> <div class="fixed top-0 right-0 left-0" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Navigation.astro" data-astro-source-loc="6:41"> <div class="hidden bg-black xl:flex flex-wrap text-amber-50 fixed top-0 right-0 left-0 p-2 z-10" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="5:98"> <div class="flex items-center static gap-5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="6:49"> <img class="inline-block ps-8 px-2 py-3" src="Document_files/Logo.svg" alt="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="7:10"> <div class="relative inline-block group" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="4:42"> <button class="inline-block w-full bg-black text-white p-2 rounded focus:bg-gray-400  hover:bg-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="5:110">Espectáculos y entradas <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block size-6" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="5:275"> <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="6:10"></path></svg> </button> <div class="absolute bg-white w-7xl shadow-lg top-15 hidden group-hover-within:block group-focus-within:block group-hover:block" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="8:134"> <div class="grid grid-cols-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="9:39"> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300 p-2" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="10:120">Alegría</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="11:116">Cirque du Soleil ALIZÉ</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="12:116">Cirque du Soleil'Auana</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="13:116">Corteo</div> </div> <div class="grid grid-cols-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="15:39"> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="16:116">Cirque du Soleil CRYSTAL</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="17:116">Drawn to Life</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="18:116">Cirque du Soleil ECHO</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="19:116">JOYÀ</div> </div> <div class="grid grid-cols-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="21:39"> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="22:116">KÁ</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="23:116">KOOZA</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="24:116">KURIOS - Gabinete de curiosidades</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="25:116">LUDÖ</div> </div> <div class="grid grid-cols-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="27:39"> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="28:116">LUZIA</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="29:116">Cirque du Soleil Mad Apple</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="30:116">Michael Jackson ONE</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="31:116">Mystère</div> </div> <div class="grid grid-cols-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="33:39"> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="34:116">"O"</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="35:116">OVO</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="36:116">Série hommage - Daniel Bélanger</div> <div class="block w-full px-4 py-2 text-black no-underline hover:bg-gray-200 border-b border-gray-300" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="37:116">'Twas th Night Before...</div> </div> <div class="bg-gray-200 p-2" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="39:39"><a class="underline text-black" href="#" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Dropespectaculos.astro" data-astro-source-loc="39:79">TODAS LAS CIUDADES</a></div> </div> </div> <a href="#" class="inline-block px-2 py-3 hover:bg-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="9:70">Las Vegas</a> <a href="#" class="inline-block px-2 py-3 hover:bg-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="10:70">Grupo</a> <a href="#" class="inline-block px-2 py-3 hover:bg-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="11:70">Video</a> <a href="#" class="inline-block px-2 py-3 hover:bg-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="12:70">Blog</a> </div> <div class="flex gap-4 absolute top-2 right-10" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="14:53"> <button type="button" class=" focus:bg-gray-400  hover:bg-gray-400  px-2 py-3" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="15:89"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="15:216"> <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="16:14"></path></svg></button> <a href="#" class="inline-block self-center p-3  focus:bg-gray-400  hover:bg-gray-400  px-2 py-3" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="17:108"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="17:235"> <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menudesktop.astro" data-astro-source-loc="18:14"></path></svg></a> </div> </div> <div class="flex justify-between bg-black text-amber-50 p-2 xl:hidden" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menumovil.astro" data-astro-source-loc="5:72"> <div class="relative inline-block group" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="1:42"> <button class="dropBtn bg-black text-white rounded focus:outline-none ps-3 cursor-pointer" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="2:97"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="2:224"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="3:10"></path></svg> </button> <div class="absolute shadow-lg top-0 hidden group-focus-within:block w-max" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="5:81"> <div class="absolute right-[-25px] top-0 z-10 cursor-pointer" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="6:72"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="6:213"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="7:14"></path></svg> </div> <div class=" bg-black shadow-lg top-0 hidden group-focus-within:block w-max" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="9:86"> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="10:48"><span class="border-b-1 border-gray-800 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="10:108">Espectáculos y entradas</span></div> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="11:48"><span class="border-b-1 border-gray-800 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="11:108">Las Vegas</span></div> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="12:48"><span class="border-b-1 border-gray-800 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="12:108">Grupo</span></div> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="13:48"><span class="border-b-1 border-gray-800 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="13:108">Video</span></div> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="14:48"><span class="border-b-1 border-gray-800 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="14:108">Blog</span></div> <div class="grid grid-cols-1 p-4 mb-4 hover:text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="15:73"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="15:200"> <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="16:18"></path></svg> </div> <div class="grid grid-cols-1 p-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="18:48"><span class="border-b-1 border-gray-800 text-gray-400" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Hamburger.astro" data-astro-source-loc="18:102">Cirque du Soleil</span></div> </div> </div> </div> <img src="Document_files/Logo.svg" alt="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menumovil.astro" data-astro-source-loc="7:6"> <button data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menumovil.astro" data-astro-source-loc="8:14"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menumovil.astro" data-astro-source-loc="8:142"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Menumovil.astro" data-astro-source-loc="8:142"></path></svg> </button> </div> </div> <div class="mt-fixed flex" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Header.astro" data-astro-source-loc="1:28"> <img class="w-full" src="Document_files/portada.jpg" alt="" srcset="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Header.astro" data-astro-source-loc="2:6"> </div> <div class="bottom-0 pt-10 pb-0 bg-black" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Footermovil.astro" data-astro-source-loc="9:43"> <div class="flex justify-start gap-6 bg-black ps-10 pb-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="1:59"> <div data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="2:11"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="size-3.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="2:93"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#f8f9fc" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="2:241"></path></svg></div> <div data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="3:11"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="size-3.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="3:93"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#f9fafb" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="3:241"></path></svg></div> <div data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="4:11"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="size-3.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="4:93"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="4:241"></path></svg></div> <div data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="5:11"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="size-3.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="5:93"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="5:241"></path></svg></div> <div data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="6:11"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256" class="size-3.5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="6:131"><g fill="#fefefe" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="6:416"><g transform="scale(5.12,5.12)" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="6:448"><path d="M12.125,1.99805c-0.43898,0.01834 -0.81457,0.32104 -0.92578,0.74609l-9.16602,34.83203c-0.06779,0.25668 -0.03074,0.52977 0.10298,0.75911c0.13372,0.22934 0.35314,0.3961 0.60991,0.46354l34.83398,9.16797c0.25668,0.06779 0.52977,0.03074 0.75911,-0.10298c0.22934,-0.13372 0.3961,-0.35314 0.46354,-0.60991l9.16602,-34.83398c0.06779,-0.25668 0.03074,-0.52977 -0.10298,-0.75911c-0.13372,-0.22934 -0.35314,-0.3961 -0.60991,-0.46354l-34.83398,-9.16602c-0.09674,-0.02587 -0.19681,-0.03706 -0.29687,-0.0332zM21.5,19l9.5,2.5l-2.5,9.5l-9.5,-2.5z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fredes.astro" data-astro-source-loc="6:448"></path></g></g></svg></div> </div> <div class="bg-black text-white w-full p-5" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="1:45"> <details class="mb-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="2:27"> <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="3:109">Cirque du Soleil<span class="mas text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="3:152">+</span><span class="menos hidden text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="3:196">-</span></summary> <ul class="pl-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="4:26"> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="5:49">Sobre nosotros</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="6:49">Boletín</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="7:49">Contáctenos</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="8:49">Tienda</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="9:49">Tarjetas de regalo</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="10:49">Preguntas Frecuentes</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="11:49">Mapa del sitio</li> </ul> </details> <details class="mb-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="14:27"> <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="15:109">Corporativo<span class="mas text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="15:147">+</span><span class="menos hidden text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="15:191">-</span></summary> <ul class="pl-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="16:26"> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="17:49">Carrera</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="18:49">Casting</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="19:49">Responsabilidad social</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="20:49">One Drop</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="21:49">Sala de prensa</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="22:49">Socios corporativos</li> </ul> </details> <details class="mb-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="25:27"> <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="26:109">Descubra nuestro mundo<span class="mas text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="26:158">+</span><span class="menos hidden text-4xl" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="26:202">-</span></summary> <ul class="pl-4" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="27:26"> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="28:49">Cirque du Soleil Entertainment Group</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="29:49">Cirque du Soleil Events + Experiences</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="30:49">Blue Man Group</li> <li class="p-2 hover:text-gray-400" data-astro-cid-oijfivg5="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Facordeon.astro" data-astro-source-loc="31:49">VStar Entertainment</li> </ul> </details> </div>  <div class="text-white p-5 pt-0 border-b-1 border-gray-700" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="1:61"> <a href="#" class="block underline mb-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="2:46">Accesibilidad</a> <a href="#" class="block underline mb-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="3:46">Politica de cookies</a> <a href="#" class="block underline mb-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="4:46">Política de Privacidad</a> <a href="#" class="block underline mb-4" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="5:46">Términos y Condiciones</a> <a href="#" class="block underline" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fenlaces.astro" data-astro-source-loc="6:41">California Derechos Privacidad</a> </div> <div class="p-5" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Flogo.astro" data-astro-source-loc="1:18"> <img class="size-20" src="Document_files/LogoBlanco.svg" alt="" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Flogo.astro" data-astro-source-loc="2:6"> </div> <div class="p-5 pt-0 flex" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fcopyr.astro" data-astro-source-loc="1:28"> <span class="align-middle pt-1" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fcopyr.astro" data-astro-source-loc="2:38"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="size-2" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fcopyr.astro" data-astro-source-loc="2:118"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fcopyr.astro" data-astro-source-loc="2:266"></path></svg></span> <span class="text-amber-50 text-xs ps-2" data-astro-source-file="/home/alumnot/Escritorio/DAW2/ASTRO/CircoSol/src/components/Fcopyr.astro" data-astro-source-loc="3:46">Cirque du Soleil 2025</span> </div> </div> <astro-dev-toolbar></astro-dev-toolbar></body></html>
