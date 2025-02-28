@@ -1,0 +1,50 @@
+<div class="bg-black text-white w-full p-5">
+    <details class="mb-4">
+        <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400">Cirque du Soleil<span class="mas text-4xl">+</span><span class="menos hidden text-4xl">-</span></summary>
+        <ul class="pl-4">
+            <li class="p-2 hover:text-gray-400">Sobre nosotros</li>
+            <li class="p-2 hover:text-gray-400">Boletín</li>
+            <li class="p-2 hover:text-gray-400">Contáctenos</li>
+            <li class="p-2 hover:text-gray-400">Tienda</li>
+            <li class="p-2 hover:text-gray-400">Tarjetas de regalo</li>
+            <li class="p-2 hover:text-gray-400">Preguntas Frecuentes</li>
+            <li class="p-2 hover:text-gray-400">Mapa del sitio</li>
+        </ul>
+    </details>
+    <details class="mb-4">
+        <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400">Corporativo<span class="mas text-4xl">+</span><span class="menos hidden text-4xl">-</span></summary>
+        <ul class="pl-4">
+            <li class="p-2 hover:text-gray-400">Carrera</li>
+            <li class="p-2 hover:text-gray-400">Casting</li>
+            <li class="p-2 hover:text-gray-400">Responsabilidad social</li>
+            <li class="p-2 hover:text-gray-400">One Drop</li>
+            <li class="p-2 hover:text-gray-400">Sala de prensa</li>
+            <li class="p-2 hover:text-gray-400">Socios corporativos</li>
+        </ul>
+    </details>
+    <details class="mb-4">
+        <summary class="flex justify-between cursor-pointer border-b-1 border-gray-700 focus:text-gray-400">Descubra nuestro mundo<span class="mas text-4xl">+</span><span class="menos hidden text-4xl">-</span></summary>
+        <ul class="pl-4">
+            <li class="p-2 hover:text-gray-400">Cirque du Soleil Entertainment Group</li>
+            <li class="p-2 hover:text-gray-400">Cirque du Soleil Events + Experiences</li>
+            <li class="p-2 hover:text-gray-400">Blue Man Group</li>
+            <li class="p-2 hover:text-gray-400">VStar Entertainment</li>
+        </ul>
+    </details>
+</div>
+
+<style>
+    details summary{
+        list-style: none;
+        outline: none;
+    }
+    details[open] .mas{
+        display: none;
+    }
+    details:not([open]) .menos{
+        display: none;
+    }
+    details[open] .menos{
+        display: inline;
+    }
+</style>
