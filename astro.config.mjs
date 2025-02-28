@@ -1,8 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
-    site:'https://SaraGallardoTomillo.github.io',
-    base: 'Astro-DIW',
+  site:'https://SaraGallardoTomillo.github.io',
+  base: 'Astro-DIW',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
