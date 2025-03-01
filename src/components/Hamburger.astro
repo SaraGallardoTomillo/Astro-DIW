@@ -1,21 +1,19 @@
-<div class="relative inline-block group">
-    <button class="dropBtn bg-black text-white rounded focus:outline-none ps-3 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+<nav>
+    <input type="checkbox" name="menu" id="menuBurger" class="hidden peer">
+    <label for="menuBurger" class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
-    </button>
-    <div class="absolute shadow-lg top-0 hidden group-focus-within:block w-max">
-        <div class="absolute right-[-25px] top-0 z-10 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-gray-400">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-        </div>
-        <div class=" bg-black shadow-lg top-0 hidden group-focus-within:block w-max">
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 hover:text-gray-400">Espectáculos y entradas</span></div>
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 hover:text-gray-400">Las Vegas</span></div>
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 hover:text-gray-400">Grupo</span></div>
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 hover:text-gray-400">Video</span></div>
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 hover:text-gray-400">Blog</span></div>
-            <div class="grid grid-cols-1 p-4 mb-4 hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-            </div>
-            <div class="grid grid-cols-1 p-4"><span class="border-b-1 border-gray-800 text-gray-400">Cirque du Soleil</span></div>
-        </div>
-    </div>
-</div>
+    </label>
+    <ul class="hidden peer-checked:block absolute bg-gray-950 start-0 w-65 h-dvh top-0 text-white">
+        <li class="absolute right-[-30px] top-2 z-10 cursor-pointer text-3xl hover:text-gray-400"> <label for="menuBurger" class="" >X</label>
+        </li>
+        <li class="flex items-center mt-2 ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer hover:text-gray-400">Espectáculos y entradas</li>
+        <li class="flex items-center ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer hover:text-gray-400">Las Vegas</li>
+        <li class="flex items-center ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer hover:text-gray-400">Grupo</li>
+        <li class="flex items-center ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer hover:text-gray-400">Video</li>
+        <li class="flex items-center ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer hover:text-gray-400">Blog</li>
+        <li class="flex items-center ps-6 pt-4 pe-8 cursor-pointer hover:text-gray-400 "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        </li>
+        <li class="flex items-center mt-6 ps-6 pt-4 pe-8 border-b-1 border-gray-800 cursor-pointer text-gray-400">Cirque du Soleil</li>
+    </ul>
+</nav>
